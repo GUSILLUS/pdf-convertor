@@ -6,7 +6,10 @@ type ContentTextareaProps = {
   isLoading: boolean;
 };
 
-const ContentTextarea: React.FC<ContentTextareaProps> = ({ onConvert, isLoading }) => {
+const ContentTextarea: React.FC<ContentTextareaProps> = ({
+  onConvert,
+  isLoading,
+}) => {
   const [text, setText] = useState("");
 
   const onChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -19,16 +22,21 @@ const ContentTextarea: React.FC<ContentTextareaProps> = ({ onConvert, isLoading 
   };
 
   return (
-    <div className="flex flex-col gap-2 grow px-6 py-4">
+    <div className="flex grow flex-col gap-2 px-6 py-4">
       <Textarea
-        className="h-full w-full font-medium resize-none"
+        className="flex grow resize-none font-medium"
         placeholder="Type your message here."
         value={text}
         onChange={onChange}
         data-testid="content-textarea"
       />
 
-      <Button variant="default" className="w-[200px] ml-auto" onClick={handleConvert} disabled={!text || isLoading}>
+      <Button
+        variant="default"
+        className="ml-auto min-w-[150px] max-w-[200px]"
+        onClick={handleConvert}
+        disabled={!text || isLoading}
+      >
         Convert to PDF
       </Button>
     </div>

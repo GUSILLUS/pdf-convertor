@@ -35,8 +35,8 @@ const PDFConvertor: React.FC<PDFConvertorProps> = ({ onItemSelect, onConvert, is
   }
 
   return (
-    <div className="flex flex-col border-lynx-white border border-solid border-neutral-800 bg-white grow basis-1/3 rounded-3xl pb-4">
-      <h2 className="text-2xl font-bold p-4">PDF Converter</h2>
+    <div className="flex max-h-[50vh] min-h-[50vh] grow basis-1/3 flex-col overflow-hidden rounded-3xl border border-lynx-white border-neutral-800 border-solid bg-white pb-4 md:h-auto md:max-h-max">
+      <h2 className="p-4 font-bold text-2xl">PDF Converter</h2>
 
       <ToggleButtonGroup
         options={Object.values(TabsOptions)}

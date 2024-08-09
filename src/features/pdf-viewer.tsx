@@ -17,17 +17,19 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ fileUrl }) => {
   });
 
   return (
-    <div className="flex flex-col border-lynx-white border border-solid border-neutral-800 bg-white grow basis-2/3 rounded-3xl min-w-[320px] px-4 pb-4">
-      <h2 className="text-2xl font-bold p-4">PDF Viewer</h2>
+    <div className="flex min-w-[300px] grow basis-2/3 flex-col rounded-3xl border border-lynx-white border-neutral-800 border-solid bg-white px-2 pb-4 md:px-4">
+      <h2 className="p-4 font-bold text-2xl">PDF Viewer</h2>
 
       {fileUrl && (
         <div
           style={{
             border: "1px solid rgba(0, 0, 0, 0.3)",
+            borderRadius: "15px",
+            overflow: "hidden",
             minHeight: "750px",
             height: "100%",
             width: "100%",
-            minWidth: "300px",
+            minWidth: "280px",
           }}
         >
           <Worker

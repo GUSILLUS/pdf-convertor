@@ -50,7 +50,7 @@ function App() {
   };
 
   return (
-    <div className="w-full flex gap-4 grow p-6 bg-white-solid justify-center h-full-screen">
+    <div className="flex min-h-full-screen w-full grow flex-col justify-center gap-4 overflow-hidden bg-white-solid p-3 md:h-full-screen md:flex-row md:p-6">
       <PDFConvertor
         onConvert={handleConvert}
         onItemSelect={handleItemSelect}

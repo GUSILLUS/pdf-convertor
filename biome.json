@@ -3,7 +3,12 @@
     "enabled": true
   },
   "linter": {
-    "enabled": true
+    "enabled": true,
+    "rules": {
+			"nursery": {
+				"useSortedClasses": "error"
+			}
+		}
   },
   "formatter": {
     "enabled": true,
@@ -15,6 +20,7 @@
     "lineWidth": 80,
     "lineEnding": "lf"
   },
+
   "javascript": {
     "formatter": {
       "arrowParentheses": "always",

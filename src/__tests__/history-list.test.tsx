@@ -36,7 +36,7 @@ describe('HistoryList', () => {
   test('calls onDelete with correct argument when delete button is clicked', () => {
     render(<HistoryList history={mockHistory} onSelect={mockOnSelect} onDelete={mockOnDelete} />);
     fireEvent.click(screen.getAllByText('X')[0]);
-    expect(mockOnDelete).toHaveBeenCalledWith('file1.txt');
+    expect(mockOnDelete).toHaveBeenCalledWith('file2.txt');
   });
 
   test('displays empty state message when there are no history items', () => {

@@ -14,17 +14,17 @@ const HistoryList: React.FC<HistoryListProps> = ({
   onDelete,
 }) => {
   return (
-    <ul className="flex flex-col-reverse grow gap-4 overflow-y-auto pt-4 px-6 justify-end">
-      {history.map(({ fileUrl, text, createdAt }) => (
+    <ul className="flex grow flex-col gap-4 overflow-y-auto px-2 pt-4 md:px-6">
+      {[...history].reverse().map(({ fileUrl, text, createdAt }) => (
         <li
           key={fileUrl}
-          className="flex gap-2 items-center w-full justify-between border border-solid border-transparent hover:border-neutral-800 rounded-3xl px-4 py-2 cursor-pointer hover:bg-neutral-200 bg-transparent duration-300"
+          className="flex w-full cursor-pointer items-center justify-between gap-2 rounded-3xl border border-transparent border-solid bg-transparent px-2 py-2 duration-300 hover:border-neutral-800 hover:bg-neutral-200 md:px-4"
         >
           <button onClick={() => onSelect(fileUrl)} type="button">
-            <p className="overflow-ellipsis overflow-hidden text-start w-[250px] whitespace-nowrap">
+            <p className="w-[150px] overflow-hidden overflow-ellipsis whitespace-nowrap text-start md:w-[250px]">
               {text}
             </p>
-            <p className="text-start w-[250px] whitespace-nowrap">
+            <p className="w-[150px] whitespace-nowrap text-start md:w-[250px]">
               {createdAt}
             </p>
           </button>
@@ -40,7 +40,7 @@ const HistoryList: React.FC<HistoryListProps> = ({
       ))}
 
       {history.length === 0 && (
-        <p className="text-neutral-400 px-4">No history yet.</p>
+        <p className="px-4 text-neutral-400">No history yet.</p>
       )}
     </ul>
   );

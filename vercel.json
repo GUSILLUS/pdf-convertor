@@ -1,0 +1,3 @@
+{
+  "rewrites": [{ "source": "/api", "destination": "http://95.217.134.12:4010/" }]
+}

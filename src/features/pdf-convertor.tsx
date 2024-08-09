@@ -42,7 +42,6 @@ const PDFConvertor: React.FC<PDFConvertorProps> = ({ onItemSelect, onConvert, is
         options={Object.values(TabsOptions)}
         selectedOption={titleOfToggleButtonGroup}
         onSelect={onTabsSelect as (value: string) => void}
-        className="mb-2"
       />
 
       <Separator />

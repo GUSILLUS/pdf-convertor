@@ -1,8 +1,7 @@
-import "./App.css";
 import { useState } from "react";
 import { PDFConvertor, PDFViewer } from "features";
 import { blobToBase64 } from "shared/lib/utils";
-import { useToast } from "components/ui/use-toast";
+import { useToast } from "shared/hooks";
 
 function App() {
   const [fileUrl, setFileUrl] = useState<string | null>(null);

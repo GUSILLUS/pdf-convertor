@@ -6,11 +6,10 @@ interface Props {
   options: string[];
   selectedOption: string;
   onSelect: (value: string) => void;
-  className?: string;
 }
 
-export const ToggleButtonGroup = ({ options, selectedOption, onSelect, className }: Props) => (
-  <ul className={cn('flex w-min', className)}>
+export const ToggleButtonGroup = ({ options, selectedOption, onSelect }: Props) => (
+  <ul className="flex w-min mb-2">
     {options.map((option) => {
       const isSelectedOption = selectedOption === option;
 

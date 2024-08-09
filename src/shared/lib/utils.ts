@@ -1,11 +1,11 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-export const cn = (...inputs: ClassValue[]) => {
+const cn = (...inputs: ClassValue[]) => {
   return twMerge(clsx(inputs));
 }
 
-export const blobToBase64 = (blob: Blob): Promise<string> => {
+const blobToBase64 = (blob: Blob): Promise<string> => {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.readAsDataURL(blob);
@@ -13,3 +13,5 @@ export const blobToBase64 = (blob: Blob): Promise<string> => {
     reader.onerror = reject;
   });
 };
+
+export { cn, blobToBase64 };

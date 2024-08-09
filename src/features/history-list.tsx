@@ -14,7 +14,7 @@ const HistoryList: React.FC<HistoryListProps> = ({
   onDelete,
 }) => {
   return (
-    <ul className="flex flex-col grow gap-4 overflow-y-auto pt-4 px-6">
+    <ul className="flex flex-col-reverse grow gap-4 overflow-y-auto pt-4 px-6 justify-end">
       {history.map(({ fileUrl, text, createdAt }) => (
         <li
           key={fileUrl}

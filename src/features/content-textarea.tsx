@@ -25,6 +25,7 @@ const ContentTextarea: React.FC<ContentTextareaProps> = ({ onConvert, isLoading 
         placeholder="Type your message here."
         value={text}
         onChange={onChange}
+        data-testid="content-textarea"
       />
 
       <Button variant="default" className="w-[200px] ml-auto" onClick={handleConvert} disabled={!text || isLoading}>

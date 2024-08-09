@@ -9,6 +9,7 @@ module.exports = (app) => {
       pathRewrite: {
         '^/api': '',
       },
+      method: 'POST',
     })
   );
 };

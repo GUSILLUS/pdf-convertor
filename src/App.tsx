@@ -20,7 +20,7 @@ function App() {
       setIsLoading(true);
 
       const response = await fetch(
-        "/api/create-pdf?apiKey=78684310-850d-427a-8432-4a6487f6dbc4",
+        "http://95.217.134.12:4010/create-pdf?apiKey=78684310-850d-427a-8432-4a6487f6dbc4",
         {
           method: "POST",
           body: JSON.stringify({ text }),

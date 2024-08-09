@@ -1,4 +1,4 @@
-const { createProxyMiddleware } = require('http-proxy-middleware');
+import { createProxyMiddleware, fixRequestBody } from 'http-proxy-middleware';
 
 module.exports = (app) => {
   app.use(
@@ -10,6 +10,7 @@ module.exports = (app) => {
         '^/api': '',
       },
       method: 'POST',
+      onProxyReq: fixRequestBody,
     })
   );
 };
